@@ -15,11 +15,11 @@ def projects():
     return render_template('projects.html')
 
 @app.route("/blog")
-def portfolio():
+def blog():
     return render_template('blog.html')
 
 @app.route("/portfolio")
-def blog():
+def portfolio():
     return render_template('portfolio.html')
 
 @app.route("/contact")
