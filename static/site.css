@@ -59,7 +59,12 @@ header h1 {
   font-family: "Raleway";
   font-weight: 400;
   font-style: normal;
-  font-size: 24pt;
+  font-size: 16pt;
+  padding: 3%;
+  border: 1px solid #000000;
+  box-shadow: 4px 4px 20px 1px rgba(174,174,174,0.9);
+  -webkit-box-shadow: 4px 4px 20px 1px rgba(174,174,174,0.9);
+  -moz-box-shadow: 4px 4px 20px 1px rgba(174,174,174,0.9);
 }
 
 nav.menu {
