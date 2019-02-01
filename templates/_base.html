@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>Colin Site- {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='site.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Major+Mono+Display" rel="stylesheet">
+    <meta name="description" content="Colin Daugherty's personal website, jump in for an in depth look at his experimenting prototypes of coding projects.">
+    <meta name="keywords" content="web, developer, colin, daugherty, eighteen, nineteen, 2019, website, websites, development, coding, process, logic, backend, html, css, javascript, php, python, flask, ideas, experimenting">
+    {% endblock %}
+</head>
+<body>
+  {% block mainmenu %}
+    <header>
+    {% if onscreen != 'home' %}
+      <h1><a class="header" href="{{url_for('index')}}">Colin Daugherty</a><span id="javascriptTest"><br>You do not have javascript enabled. Some parts of the website may not function correctly</span></h1>
+    {% else %}
+      <h1 class="header">Colin Daugherty<span id="javascriptTest"><br>You do not have javascript enabled. Some parts of the website may not function correctly</span></h1>
+    {% endif %}
+      <nav class="menu">
+        <ul class="mainmenu">
+          {% if onscreen == 'about' %}
+            <li id="selected" class="mainmenu">About</li>
+          {% else %}
+            <li class="mainmenu"><a href="{{url_for('about')}}">About</a></li>
+          {% endif %}
+          {% if onscreen == 'projects' %}
+            <li id="selected" class="mainmenu">Projects</li>
+          {% else %}
+            <li class="mainmenu"><a href="{{url_for('projects')}}">Projects</a></li>
+          {% endif %}
+          {% if onscreen == 'blog' %}
+            <li id="selected" class="mainmenu">Blog</li>
+          {% else %}
+            <li class="mainmenu"><a href="{{url_for('blog')}}">Blog</a></li>
+          {% endif %}
+          {% if onscreen == 'portfolio' %}
+            <li id="selected" class="mainmenu">Portfolio</li>
+          {% else %}
+            <li class="mainmenu"><a href="{{url_for('portfolio')}}">Portfolio</a></li>
+          {% endif %}
+          {% if onscreen == 'contact' %}
+            <li id="selected" class="mainmenu">Contact</li>
+          {% else %}
+            <li class="mainmenu"><a href="{{url_for('contact')}}">Contact</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </header>
+  {% endblock %}
+  <div id="content">{% block content %}{% endblock %}</div>
+  <div id="footer">
+    {% block footer %}
+      <header><h1><a id="footerheader" class="header" href="mailto:colinddaugherty@gmail.com?subject=Contact_From_Website">Contact me!</a></h1>
+        <nav class="menu">
+          <ul class="mainmenu">
+            <li class="mainmenu"><a href="https://www.linkedin.com/in/colinddaugherty"><i class="cdi cdi-linkedin"></i></a></li>
+            <li class="mainmenu">|</li>
+            <li class="mainmenu"><a href="https://www.github.com/colindaugherty"<i class="cdi cdi-github"></i></a></li>
+            <li class="mainmenu">|</li>
+            <li class="mainmenu"><a href="https://www.twitter.com/colinddaugherty"><i class="cdi cdi-twitter"></i></a></li>
+            <li class="mainmenu">|</li>
+            <li class="mainmenu"><a href="https://www.facebook.com/colin.daugherty.16568"><i class="cdi cdi-facebook"></i></a></li>
+            <li class="mainmenu">|</li>
+            <li class="mainmenu"><a href="https://www.instagram.com/colin.d.daugherty"><i class="cdi cdi-instagram"></i></a></li>
+            <li class="mainmenu">|</li>
+            <li class="mainmenu"><a href="https://www.snapchat.com/add/mrcdaug"><i class="cdi cdi-snapchat-ghost"></i></a></li>
+            <li class="mainmenu"><a href="https://www.youtube.com/channel/UC97gw0JmlsYigmKAqbpKylQ"><i class="cdi cdi-youtube-play"></i></a></li>
+          </ul>
+        </nav>
+      </header>
+      <script src="{{url_for('static', filename='script/jquery.min.js')}}"></script>
+      <script src="https://use.fortawesome.com/19d37d2e.js"></script>
+      <script src="{{url_for('static', filename='script/script.js')}}"></script>
+    {% endblock %}
+  </div>
+  {% if onscreen == 'home' %}
+  <span id="top">C O L I N</span>
+  <span id="bottom">C O L I N</span>
+  {% elif onscreen == 'about' %}
+  <span id="top">A B O U T</span>
+  <span id="bottom">A B O U T</span>
+  {% elif onscreen == 'projects' %}
+  <span id="top">P R O J E C T S</span>
+  <span id="bottom">P R O J E C T S</span>
+  {% elif onscreen == 'blog' %}
+  <span id="top">B L O G</span>
+  <span id="bottom">B L O G</span>
+  {% elif onscreen == 'portfolio' %}
+  <span id="top">P O R T F O L I O</span>
+  <span id="bottom">P O R T F O L I O</span>
+  {% elif onscreen == 'contacts' %}
+  <span id="top">C O N T A C T</span>
+  <span id="bottom">C O N T A C T</span>
+  {% elif onscreen == '404' %}
+  <span id="top">E R R O R</span>
+  <span id="bottom">4 0 4</span>
+  {% elif onscreen == '404' %}
+  <span id="top">E R R O R</span>
+  <span id="bottom">5 0 0</span>
+  {% endif %}
+</body>
+</html>
