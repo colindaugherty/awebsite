@@ -143,6 +143,7 @@ https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 
     nav.menu {
       padding: 0 1em 0 1em;
+      display: inline;
     }
 
     ul.mainmenu li {
@@ -150,7 +151,7 @@ https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
     }
 
     #top, #bottom {
-      font-size: 3rem;
+      font-size: 5.1rem;
       z-index: -1;
     }
 
@@ -171,7 +172,7 @@ https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
   and (min-resolution: 192dpi) {
 }
 
-/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* ----------- iPhone 5/SE up to iPhone 8+ ----------- */
 
 /* Portrait */
 @media only screen
@@ -191,7 +192,12 @@ https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
     }
 
     nav.menu {
-      display: hidden;
+      display: none;
+    }
+
+    #oneLiner {
+      font-size: 5rem;
+      padding: 4%;
     }
 
     #content {
@@ -226,6 +232,48 @@ https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
 
+    body {
+      font-size: 5rem;
+    }
+
+    header h1 {
+      font-family: "Raleway";
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    nav.menu {
+      display: none;
+    }
+
+    #oneLiner {
+      font-size: 5rem;
+      padding: 4%;
+    }
+
+    #content {
+      margin: auto;
+      width: 85%;
+      height: 95%;
+    }
+
+    #top, #bottom {
+      color: #000000;
+      position: fixed;
+      background-color: #F6F6F6;
+      text-align: center;
+      font-size: 11rem;
+      width: -webkit-fill-available;
+    }
+
+    #top {
+      bottom: 94%;
+    }
+
+    #bottom {
+      top: 94%;
+    }
+
 }
 
 /* ----------- iPhone X ----------- */
@@ -238,6 +286,48 @@ https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) {
 
+    body {
+      font-size: 5rem;
+    }
+
+    header h1 {
+      font-family: "Raleway";
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    nav.menu {
+      display: none;
+    }
+
+    #oneLiner {
+      font-size: 5rem;
+      padding: 4%;
+    }
+
+    #content {
+      margin: auto;
+      width: 85%;
+      height: 95%;
+    }
+
+    #top, #bottom {
+      color: #000000;
+      position: fixed;
+      background-color: #F6F6F6;
+      text-align: center;
+      font-size: 11rem;
+      width: -webkit-fill-available;
+    }
+
+    #top {
+      bottom: 94%;
+    }
+
+    #bottom {
+      top: 94%;
+    }
+
 }
 
 /* Landscape */
@@ -246,6 +336,48 @@ https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
   and (max-device-width: 812px)
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) {
+
+    body {
+      font-size: 5rem;
+    }
+
+    header h1 {
+      font-family: "Raleway";
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    nav.menu {
+      display: none;
+    }
+
+    #oneLiner {
+      font-size: 5rem;
+      padding: 4%;
+    }
+
+    #content {
+      margin: auto;
+      width: 85%;
+      height: 95%;
+    }
+
+    #top, #bottom {
+      color: #000000;
+      position: fixed;
+      background-color: #F6F6F6;
+      text-align: center;
+      font-size: 11rem;
+      width: -webkit-fill-available;
+    }
+
+    #top {
+      bottom: 94%;
+    }
+
+    #bottom {
+      top: 94%;
+    }
 
 }
 
