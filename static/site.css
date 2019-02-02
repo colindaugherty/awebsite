@@ -29,10 +29,10 @@ header nav {
   border-bottom: 2px solid #000000;
 }
 
-#footerheader {
-  border-top: 2px solid #000000;
+/* #footerheader {
+  border-bottom: 2px solid #000000;
   border-bottom: 0px;
-}
+} */
 
 header h1 {
   font-family: "Raleway";
