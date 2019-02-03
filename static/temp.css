@@ -1,0 +1,105 @@
+body {
+  background-color: #F6F6F6;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+div.header header {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+div.header nav.menu {
+  margin: auto;
+}
+
+div.header nav a, div.header a {
+  text-decoration: none;
+  position: relative;
+  color: #000000;
+}
+
+div.header nav a:after, div.header a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #000000;
+  transition: 0.7s;
+}
+
+div.header nav a:hover:after, div.header a:hover:after {
+  width: 100%;
+}
+
+div.header ul.mainmenu li {
+  color: #000000;
+}
+
+#top, #bottom {
+  color: #000000;
+  position: fixed;
+  background-color: #F6F6F6;
+  text-align: center;
+  font-size: 1rem;
+  width: -webkit-fill-available;
+}
+
+#top {
+  bottom: 100000px;
+}
+
+#bottom {
+  top: 100000px;
+}
+
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    body {
+      background-color: #F6F6F6;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      width: 100%;
+      height: 100%;
+    }
+
+    div.header header {
+      font-size: 2rem;
+    }
+
+    div.header nav.menu {
+      margin: auto;
+    }
+
+    div#content div.section1.introStatement {
+      font-family: "Raleway";
+      font-weight: 400;
+      font-style: normal;
+      font-size: 2rem;
+      text-align: center;
+      border: 1px solid #000000;
+      box-shadow: 4px 4px 20px 1px rgba(174,174,174,0.9);
+      -webkit-box-shadow: 4px 4px 20px 1px rgba(174,174,174,0.9);
+      -moz-box-shadow: 4px 4px 20px 1px rgba(174,174,174,0.9);
+      width: 90%;
+      height: 90%;
+    }
+
+    div#content div.section2.shortAbout {
+      width: 100%;
+      height: 75%;
+    }
+
+    div#content div.section3.shortProjects {
+      width: 100%;
+      height: 25%;
+    }
+}
