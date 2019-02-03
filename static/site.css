@@ -1,84 +1,32 @@
+/*
+
+I really don't like making this kind of stylesheet, but I hate styles.
+
+*/
+
 body {
   background-color: #F6F6F6;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  color: #000000;
 }
 
-#shortAbout {
+div.myWork {
   background-color: #191919;
   color: white;
 }
 
-#content {
-  margin: auto;
-}
-
-*.bodywidth {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* header codes */
-
-header {
-  color: #000000;
-}
-
-header nav {
-  border-bottom: 2px solid #000000;
-}
-
-/* #footerheader {
-  border-bottom: 2px solid #000000;
-  border-bottom: 0px;
-} */
-
-header h1 {
+*.oneLiner {
   font-family: "Raleway";
-  font-weight: 400;
   font-style: normal;
-}
-
-#oneLiner {
-  font-family: "Raleway";
   font-weight: 400;
-  font-style: normal;
   font-size: 1rem;
-  text-align: center;
-  border: 1px solid #000000;
-  box-shadow: 4px 4px 20px 1px rgba(174,174,174,0.9);
-  -webkit-box-shadow: 4px 4px 20px 1px rgba(174,174,174,0.9);
-  -moz-box-shadow: 4px 4px 20px 1px rgba(174,174,174,0.9);
+  letter-spacing: 5px;
 }
 
-nav.menu {
-  margin: auto;
-}
-
-nav a, a.header {
-  text-decoration: none;
-  position: relative;
-  color: #000000;
-}
-
-nav a:after, a.header:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  border-bottom: 2px solid #000000;
-  transition: 0.7s;
-}
-
-nav a:hover:after, a.header:hover:after {
-  width: 100%;
-}
-
-ul.mainmenu li {
-  display: inline;
-  color: #000000;
+*.oneLiner.noSpacing {
+  letter-spacing: normal;
 }
 
 #top, #bottom {
@@ -91,422 +39,52 @@ ul.mainmenu li {
 }
 
 #top {
-  bottom: 100000px;
+  bottom: 0%;
 }
 
 #bottom {
-  top: 100000px;
+  top: 0%;
 }
 
-
-/*
-
-media queries provided by css-tricks
-https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
-
-*/
-
-/* ----------- Non-Retina Screens ----------- */
-@media screen
-  and (min-device-width: 1200px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-    body {
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: auto;
-    }
-
-    #shortAbout {
-      padding: 1%;
-    }
-
-    #content {
-      width: 95%;
-      height: 95%;
-    }
-
-    /* header codes */
-
-    header {
-      padding: 1%;
-    }
-
-    header h1 {
-      margin: auto;
-    }
-
-    #oneLiner {
-      padding: 3%;
-    }
-
-    nav.menu {
-      padding: 0 1em 0 1em;
-    }
-
-    ul.mainmenu li {
-      padding: 0 3em 0 0;
-    }
-
-    #top, #bottom {
-      font-size: 5.1rem;
-      z-index: -1;
-    }
-
-    #top {
-      bottom: 94%;
-    }
-
-    #bottom {
-      top: 93%;
-    }
+nav a {
+  text-decoration: none;
+  position: relative;
+  color: #000000;
 }
 
-/* ----------- Retina Screens ----------- */
-@media screen
-  and (min-device-width: 1200px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) {
+nav a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #000000;
+  transition: 0.7s;
 }
 
-/* ----------- iPhone 5/SE up to iPhone 8+ ----------- */
+nav a:hover:after {
+  width: 100%;
+}
 
-/* Portrait */
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
+/* Extra Small -- Portrait Phones -- less than 576px */
+@media (max-width: 575.98px) {
+  *.oneLiner {
+    font-size: 3rem;
+    letter-spacing: 5px;
+  }
+}
 
-    body {
-      font-size: 5rem;
-    }
-
-    header h1 {
-      font-family: "Raleway";
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    nav.menu {
-      display: none;
-    }
-
-    #oneLiner {
-      font-size: 5rem;
-      padding: 4%;
-    }
-
-    #content {
-      margin: auto;
-      width: 85%;
-      height: 95%;
-    }
-
-    #top, #bottom {
-      color: #000000;
-      position: fixed;
-      background-color: #F6F6F6;
-      text-align: center;
-      font-size: 11rem;
-      width: -webkit-fill-available;
-    }
-
-    #top {
-      bottom: 94%;
-    }
-
-    #bottom {
-      top: 94%;
-    }
+/* Small -- Landscape Phones -- less than 768px */
+@media (max-width:767.96px) {
 
 }
 
-/* Landscape */
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
-    body {
-      font-size: 5rem;
-      margin: 5rem;
-    }
-
-    header h1 {
-      font-family: "Raleway";
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    nav.menu {
-      display: block;
-    }
-
-    #oneLiner {
-      font-size: 5rem;
-      padding: 4%;
-    }
-
-    #content {
-      margin: auto;
-      width: 95%;
-      height: 95%;
-    }
-
-    #top, #bottom {
-      color: #000000;
-      position: fixed;
-      background-color: #F6F6F6;
-      text-align: center;
-      font-size: 8rem;
-      width: -webkit-fill-available;
-    }
-
-    #top {
-      bottom: 86%;
-    }
-
-    #bottom {
-      top: 86%;
-    }
+/* Medium -- tablets -- less than 992px */
+@media (max-width: 991.98px) {
 
 }
 
-/* ----------- iPhone X ----------- */
-
-
-/* Portrait */
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 812px)
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) {
-
-    body {
-      font-size: 5rem;
-    }
-
-    header h1 {
-      font-family: "Raleway";
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    nav.menu {
-      display: none;
-    }
-
-    #oneLiner {
-      font-size: 5rem;
-      padding: 4%;
-    }
-
-    #content {
-      margin: auto;
-      width: 85%;
-      height: 95%;
-    }
-
-    #top, #bottom {
-      color: #000000;
-      position: fixed;
-      background-color: #F6F6F6;
-      text-align: center;
-      font-size: 11rem;
-      width: -webkit-fill-available;
-    }
-
-    #top {
-      bottom: 94%;
-    }
-
-    #bottom {
-      top: 94%;
-    }
-
-}
-
-/* Landscape */
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 812px)
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) {
-
-    body {
-      font-size: 5rem;
-    }
-
-    header h1 {
-      font-family: "Raleway";
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    nav.menu {
-      display: none;
-    }
-
-    #oneLiner {
-      font-size: 5rem;
-      padding: 4%;
-    }
-
-    #content {
-      margin: auto;
-      width: 85%;
-      height: 95%;
-    }
-
-    #top, #bottom {
-      color: #000000;
-      position: fixed;
-      background-color: #F6F6F6;
-      text-align: center;
-      font-size: 11rem;
-      width: -webkit-fill-available;
-    }
-
-    #top {
-      bottom: 94%;
-    }
-
-    #bottom {
-      top: 94%;
-    }
-
-}
-
-/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Portrait */
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Landscape */
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* ----------- iPad Pro 10.5" ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 834px)
-  and (max-device-width: 1112px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Portrait */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen
-  and (min-device-width: 834px)
-  and (max-device-width: 834px)
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Landscape */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen
-  and (min-device-width: 1112px)
-  and (max-device-width: 1112px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* ----------- iPad Pro 12.9" ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Portrait */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1024px)
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Landscape */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen
-  and (min-device-width: 1366px)
-  and (max-device-width: 1366px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* ----------- Kindle Fire HD 7" ----------- */
-
-/* Portrait */
-@media only screen
-  and (min-device-width: 800px)
-  and (max-device-width: 1280px)
-  and (-webkit-min-device-pixel-ratio: 1.5)
-  and (orientation: portrait) {
-}
-
-/* Landscape */
-@media only screen
-  and (min-device-width: 800px)
-  and (max-device-width: 1280px)
-  and (-webkit-min-device-pixel-ratio: 1.5)
-  and (orientation: landscape) {
-
-}
-
-/* ----------- Kindle Fire HD 8.9" ----------- */
-
-/* Portrait */
-@media only screen
-  and (min-device-width: 1200px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 1.5)
-  and (orientation: portrait) {
-}
-
-/* Landscape */
-@media only screen
-  and (min-device-width: 1200px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 1.5)
-  and (orientation: landscape) {
+/* Large -- desktops -- less than 1200px */
+@media (max-width: 1199.98px) {
 
 }

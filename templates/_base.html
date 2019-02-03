@@ -1,49 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     {% block head %}
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Colin Site- {% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='temp.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='site.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Lato|Major+Mono+Display" rel="stylesheet">
     <meta name="description" content="Colin Daugherty's personal website, jump in for an in depth look at his experimenting prototypes of coding projects.">
     <meta name="keywords" content="web, developer, colin, daugherty, eighteen, nineteen, 2019, website, websites, development, coding, process, logic, backend, html, css, javascript, php, python, flask, ideas, experimenting">
     {% endblock %}
 </head>
 <body>
-  <div class="header">
+  <div id="header">
     <header>
-    {% if onscreen != 'home' %}
-      <h1><a href="{{url_for('index')}}">Colin Daugherty</a><span id="javascriptTest"><br>You do not have javascript enabled. Some parts of the website may not function correctly</span></h1>
-    {% else %}
-      <h1>Colin Daugherty<span id="javascriptTest"><br>You do not have javascript enabled. Some parts of the website may not function correctly</span></h1>
-    {% endif %}
-      <nav class="menu">
-        <ul class="mainmenu">
+      <nav class="navbar navbar-light bg-transparent">
+        {% if onscreen != 'home' %}
+          <h1><a class="navbar-brand" href="{{url_for('index')}}">Colin Daugherty</a></h1>
+        {% else %}
+          <h1 class="navbar-brand">Colin Daugherty</h1>
+        {% endif %}
+        <ul class="nav justify-content-end">
           {% if onscreen == 'about' %}
-            <li id="selected" class="mainmenu">About</li>
+            <li class="nav-item active">About</li>
           {% else %}
-            <li class="mainmenu"><a href="{{url_for('about')}}">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{url_for('about')}}">About</a></li>
           {% endif %}
           {% if onscreen == 'projects' %}
-            <li id="selected" class="mainmenu">Projects</li>
+            <li class="nav-item active">Projects</li>
           {% else %}
-            <li class="mainmenu"><a href="{{url_for('projects')}}">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{url_for('projects')}}">Projects</a></li>
           {% endif %}
           {% if onscreen == 'blog' %}
-            <li id="selected" class="mainmenu">Blog</li>
+            <li class="nav-item active">Blog</li>
           {% else %}
-            <li class="mainmenu"><a href="{{url_for('blog')}}">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{url_for('blog')}}">Blog</a></li>
           {% endif %}
           {% if onscreen == 'portfolio' %}
-            <li id="selected" class="mainmenu">Portfolio</li>
+            <li class="nav-item active">Portfolio</li>
           {% else %}
-            <li class="mainmenu"><a href="{{url_for('portfolio')}}">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{url_for('portfolio')}}">Portfolio</a></li>
           {% endif %}
           {% if onscreen == 'contact' %}
-            <li id="selected" class="mainmenu">Contact</li>
+            <li class="nav-item active">Contact</li>
           {% else %}
-            <li class="mainmenu"><a href="{{url_for('contact')}}">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{url_for('contact')}}">Contact</a></li>
           {% endif %}
         </ul>
       </nav>
@@ -52,27 +54,23 @@
   <div id="content">{% block content %}{% endblock %}</div>
   <div id="footer">
     <h1><a href="mailto:colinddaugherty@gmail.com?subject=Contact_From_Website">Contact me!</a></h1>
-    <nav class="menu">
-      <ul class="mainmenu">
-        <li class="mainmenu"><a href="https://www.linkedin.com/in/colinddaugherty"><i class="cdi cdi-linkedin"></i></a></li>
-        <li class="mainmenu">|</li>
-        <li class="mainmenu"><a href="https://www.github.com/colindaugherty"<i class="cdi cdi-github"></i></a></li>
-        <li class="mainmenu">|</li>
-        <li class="mainmenu"><a href="https://www.twitter.com/colinddaugherty"><i class="cdi cdi-twitter"></i></a></li>
-        <li class="mainmenu">|</li>
-        <li class="mainmenu"><a href="https://www.facebook.com/colin.daugherty.16568"><i class="cdi cdi-facebook"></i></a></li>
-        <li class="mainmenu">|</li>
-        <li class="mainmenu"><a href="https://www.instagram.com/colin.d.daugherty"><i class="cdi cdi-instagram"></i></a></li>
-        <li class="mainmenu">|</li>
-        <li class="mainmenu"><a href="https://www.snapchat.com/add/mrcdaug"><i class="cdi cdi-snapchat-ghost"></i></a></li>
-        <li class="mainmenu"><a href="https://www.youtube.com/channel/UC97gw0JmlsYigmKAqbpKylQ"><i class="cdi cdi-youtube-play"></i></a></li>
+    <nav>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/colinddaugherty"><i class="cdi cdi-linkedin"></i></a></li>
+        <li>|</li>
+        <li><a href="https://www.github.com/colindaugherty"<i class="cdi cdi-github"></i></a></li>
+        <li>|</li>
+        <li><a href="https://www.twitter.com/colinddaugherty"><i class="cdi cdi-twitter"></i></a></li>
+        <li>|</li>
+        <li><a href="https://www.facebook.com/colin.daugherty.16568"><i class="cdi cdi-facebook"></i></a></li>
+        <li>|</li>
+        <li><a href="https://www.instagram.com/colin.d.daugherty"><i class="cdi cdi-instagram"></i></a></li>
+        <li>|</li>
+        <li><a href="https://www.snapchat.com/add/mrcdaug"><i class="cdi cdi-snapchat-ghost"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UC97gw0JmlsYigmKAqbpKylQ"><i class="cdi cdi-youtube-play"></i></a></li>
       </ul>
     </nav>
-    {% block footer %}
-      <script src="{{url_for('static', filename='script/jquery.min.js')}}"></script>
-      <script src="https://use.fortawesome.com/19d37d2e.js"></script>
-      <script src="{{url_for('static', filename='script/script.js')}}"></script>
-    {% endblock %}
+    <span id="javascriptTest"><br>You do not have javascript enabled. Some parts of the website may not function correctly</span>
   </div>
   {% if onscreen == 'home' %}
   <span id="top">C O L I N</span>
@@ -99,5 +97,11 @@
   <span id="top">E R R O R</span>
   <span id="bottom">5 0 0</span>
   {% endif %}
+  {% block footer %}
+    <script src="{{url_for('static', filename='script/jquery.min.js')}}"></script>
+    <script src="https://use.fortawesome.com/19d37d2e.js"></script>
+    <script src="{{url_for('static', filename='script/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='script/script.js')}}"></script>
+  {% endblock %}
 </body>
 </html>
