@@ -3,11 +3,11 @@ from flask import Flask, flash, render_template, request, session, redirect, url
 
 app = Flask(__name__, subdomain_matching=True)
 
-@app.route("/" subdomain="api.")
+@app.route("/" subdomain="api")
 def api_dashboard():
 	return "<h1 style='color:blue'>It worked yea boi</h1>"
 
-@app.route("/" subdomain="delta.")
+@app.route("/" subdomain="delta")
 def delta():
 	return "<h1 style='color:blue'>Delta is gonna be here yea boi</h1>"
 
