@@ -1,7 +1,7 @@
 from flask import Flask, flash, render_template, request, session, redirect, url_for
 # from delta import Delta
 
-app = Flask(__name__)
+app = Flask(__name__, subdomain_matching=True)
 
 @app.route("/" subdomain="api.")
 def api_dashboard():
