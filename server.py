@@ -39,17 +39,17 @@ def contact():
 def social():
     return render_template('404.html')
 
-# @app.route("/projects/delta")
-# def projectsdelta():
-# 	return redirect(url_for('delta'))
-#
-# @app.route("/projects/spotify-music-app")
-# def spotifyMusicApp():
-# 	return render_template('coming1_soon.html')
-#
-# @app.route("/projects/security-camera")
-# def securityCam():
-# 	return render_template('coming1_soon.html')
+@app.route("/projects/delta")
+def projectsdelta():
+	return redirect(url_for('delta'))
+
+@app.route("/projects/spotify-music-app")
+def spotifyMusicApp():
+	return render_template('coming1_soon.html')
+
+@app.route("/projects/security-camera")
+def securityCam():
+	return render_template('coming1_soon.html')
 
 @app.errorhandler(404)
 def page_not_found(e):
