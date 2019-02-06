@@ -1,19 +1,19 @@
 from flask import Flask, flash, render_template, request, session, redirect, url_for
 # from delta import Delta
 
-app = Flask(__name__, subdomain_matching=True)
+app = Flask(__name__)
 
 # @app.route("/" subdomain="api")
 # def api_dashboard():
 # 	return "<h1 style='color:blue'>It worked yea boi</h1>"
 #
-@app.route("/")
-def delta():
-	return "<h1 style='color:blue'>Delta is gonna be here yea boi</h1>"
+# @app.route("/" subdomain="delta")
+# def delta():
+# 	return "<h1 style='color:blue'>Delta is gonna be here yea boi</h1>"
 
-# @app.route("/")
-# def index():
-#     return render_template('index.html')
+@app.route("/")
+def index():
+    return render_template('index.html')
 
 @app.route("/about")
 def about():
