@@ -3,7 +3,7 @@ from flask import Flask, flash, render_template, request, session, redirect, url
 
 app = Flask(__name__)
 
-app.config["SERVER_NAME"] = "colindaugherty.net"
+app.config["SERVER_NAME"] = ["colindaugherty.net", "api.colindaugherty.net", "delta.colindaugherty.net", "www.colindaugherty.net"]
 
 # @app.route("/" subdomain="api")
 # def api_dashboard():
