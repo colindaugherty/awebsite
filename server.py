@@ -3,6 +3,8 @@ from flask import Flask, flash, render_template, request, session, redirect, url
 
 app = Flask(__name__)
 
+app.config["SERVER_NAME"] = "colindaugherty.net:80"
+
 # @app.route("/" subdomain="api")
 # def api_dashboard():
 # 	return "<h1 style='color:blue'>It worked yea boi</h1>"
