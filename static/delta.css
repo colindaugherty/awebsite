@@ -14,4 +14,9 @@ input.inputField {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
+  width: 10%;
+}
+
+h1.delta {
+  width: 10%;
 }
